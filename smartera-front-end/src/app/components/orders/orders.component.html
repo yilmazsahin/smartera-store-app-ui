@@ -1,0 +1,29 @@
+<div>
+  <h2>Orders</h2>
+  <table>
+    <thead>
+      <tr>
+        <td>Order Tracking Number</td>
+        <td>Customer Id</td>
+        <td>Total Quantity</td>
+        <td>Total Price</td>
+        <td>Date Created</td>
+        <td>Last Updated</td>
+        <td>Shipping Address</td>
+        <td>Billing Address</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders">
+        <td>{{ order.customerId }}</td>
+        <td>{{ order.billingAddress }}</td>
+        <td>{{ order.shippingAddress }}</td>
+        <td>{{ order.orderTrackingNumber }}</td>
+        <td>{{ order.dateCreated }}</td>
+        <td>{{ order.lastUpdated }}</td>
+        <td>{{ order.totalQuantity }}</td>
+        <td>{{ order.totalPrice }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
