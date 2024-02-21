@@ -1,29 +1,40 @@
-<div>
+<div class="container">
   <h2>Orders</h2>
-  <table>
-    <thead>
-      <tr>
-        <td>Order Tracking Number</td>
-        <td>Customer Id</td>
-        <td>Total Quantity</td>
-        <td>Total Price</td>
-        <td>Date Created</td>
-        <td>Last Updated</td>
-        <td>Shipping Address</td>
-        <td>Billing Address</td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let order of orders">
-        <td>{{ order.customerId }}</td>
-        <td>{{ order.billingAddress }}</td>
-        <td>{{ order.shippingAddress }}</td>
-        <td>{{ order.orderTrackingNumber }}</td>
-        <td>{{ order.dateCreated }}</td>
-        <td>{{ order.lastUpdated }}</td>
-        <td>{{ order.totalQuantity }}</td>
-        <td>{{ order.totalPrice }}</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="page-buttons">
+    <button routerLink="/customers">Customers</button>
+    <button routerLink="/orders">Orders</button>
+  </div>
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <td>Customer Id</td>
+          <td>Order Tracking Number</td>
+          <td>Shipping Address</td>
+          <td>Billing Address</td>
+          <td>Date Created</td>
+          <td>Last Updated</td>
+          <td>Total Quantity</td>
+          <td>Total Price</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders">
+          <td>{{ order.customerId }}</td>
+          <td>{{ order.orderTrackingNumber }}</td>
+          <td>{{ order.billingAddress }}</td>
+          <td>{{ order.shippingAddress }}</td>
+          <td>{{ order.dateCreated }}</td>
+          <td>{{ order.lastUpdated }}</td>
+          <td>{{ order.totalQuantity }}</td>
+          <td>{{ order.totalPrice }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="page-buttons db-setting-btns">
+    <button routerLink="/new-order">Add Order</button>
+    <button routerLink="/edit-order">Edit Order</button>
+    <button routerLink="/delete-order">Delete Order</button>
+  </div>
 </div>

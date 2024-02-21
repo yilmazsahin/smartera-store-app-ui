@@ -1,5 +1,5 @@
 table {
-    width: 100%;
+    width: 80%;
     border-collapse: collapse;
     border: 1px solid #ddd;
     justify-content: center;
@@ -44,7 +44,8 @@ table {
   
   label {
     display: inline-block;
-    width: 150px;
+    width: auto;
+    margin-right: 10px;
   }
   
   input[type="text"],
@@ -75,5 +76,10 @@ table {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .delete-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   

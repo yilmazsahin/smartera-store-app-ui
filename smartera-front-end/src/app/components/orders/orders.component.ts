@@ -1,7 +1,7 @@
 import { OrdersService } from './../../services/orders.service';
 import { Order } from './../../common/order.spec';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Route } from '@angular/router';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-orders',
@@ -12,12 +12,12 @@ export class OrdersComponent implements OnInit {
   orders: Order[] = [];
   constructor(
     private ordersService: OrdersService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
   ngOnInit(): void {
-    this.route.paramMap.subscribe(() => {
-      this.ordersList();
-    });
+    this.ordersList();
+    this.route.paramMap.subscribe(() => {});
   }
   ordersList() {
     this.ordersService.getOrders().subscribe((data) => {

@@ -7,7 +7,7 @@ import { Order } from '../common/order.spec';
   providedIn: 'root',
 })
 export class OrdersService {
-  private baseUrl = 'http://localhost:8080/api/orders';
+  private baseUrl = 'http://localhost:8081/api/orders';
 
   constructor(private httpClient: HttpClient) {}
   getOrders(): Observable<Order[]> {

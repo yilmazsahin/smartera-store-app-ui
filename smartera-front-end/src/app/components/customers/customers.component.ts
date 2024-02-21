@@ -10,6 +10,8 @@ import { Customer } from '../../common/customer';
 })
 
 export class CustomersComponent implements OnInit {
+showCustomerTable: any;
+
   customers: Customer[] = [];
 
   constructor(
